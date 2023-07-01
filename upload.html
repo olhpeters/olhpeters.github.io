@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content>
+    <meta name="author" content>
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/tabulator_site.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/upload.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      file upload
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <form id="fileUploadForm" method="POST" enctype="multipart/form-data">
+          <div class="input-group mb-3">
+
+            <!-- <label for="file" class="form-label">Choose file:</label> -->
+            <input class="form-control" type="file" id="file"
+              aria-describedby="file-upload-1">
+            <span class="input-group-text" id="file-upload-1"><button
+                type="submit" class="btn btn-success">Upload</button></span>
+
+          </div>
+          <div class="container mb-3">
+            <div id="example-table"></div>
+          </div>
+
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here"
+              id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Comments</label>
+          </div>
+
+        </form>
+        <div id="message"></div>
+      </div>
+
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.7.0.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/tabulator.min.js"></script>
+    <script src="js/upload.js"></script>
+  </body>
+</html>
