@@ -42,10 +42,11 @@
             <div id="example-table"></div>
           </div>
 
-          <div class="input-group mb-3">
+          <div class="mb-3">
             <button id="print-table" class="btn btn-success mr-3">Print Table</button>
             <button id="download-csv" class="btn btn-success pr-1">Download CSV</button>
-            <button id="download-xlsx" class="btn btn-success mr-1">Download XLSX</button>
+            <button id="download-xlsx" class="btn btn-success mr-1">Download
+              XLSX</button>
             <button id="download-pdf" class="btn btn-success mr-1">Download PDF</button>
           </div>
 
@@ -58,14 +59,35 @@
             <button id="talk-button" class="btn btn-success">Talk</button>
           </div>
 
-          <hr/>
+          <hr />
 
           <div id="talk-response">
-            
+
           </div>
 
         </form>
         <div id="message"></div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="ttt-modal" tabindex="-1"
+        aria-labelledby="ttt-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ttt-modal-label">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div id="ttt-modal-body" class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
 
     </main><!-- /.container -->
@@ -78,9 +100,12 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/tabulator.min.js"></script>
-    <script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
+    <script type="text/javascript"
+      src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
     <script src="js/upload.js"></script>
   </body>
 </html>

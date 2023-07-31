@@ -2,6 +2,8 @@ $(document).ready(function () {
 
   var table
 
+  var session
+
   function buildTable(tabledata) {
     table = new Tabulator("#example-table", {
       data: tabledata, //assign data to table
@@ -42,7 +44,16 @@ $(document).ready(function () {
         // $('#message').html(response.message).addClass(response.class);
         tableData = JSON.parse(response.table)
         console.log(tableData)
+        session = response.session
         buildTable(tableData)
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        $('#ttt-modal').modal('show'); 
+        $('#ttt-modal-label').html('Error');
+        $('#ttt-modal-body').html(xhr.responseJSON.detail);
+        console.log(xhr)
+        /*alert(xhr.status);
+        alert(thrownError);*/
       }
     })
   })
@@ -75,15 +86,23 @@ $(document).ready(function () {
       type: 'POST',
       data: JSON.stringify({
         talk_input: talkInput,
+        session: session
       }),
       contentType: 'application/json',
       dataType: "json",
       success: function (response) {
         $('#talk-response').html(response.message)
-        /*tableData = JSON.parse(response.table)
-        console.log(tableData)*/
-        console.log(response)
-        //buildTable(tableData)
+        tableData = JSON.parse(response.table)
+        console.log(tableData)
+        buildTable(tableData)
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        $('#ttt-modal').modal('show'); 
+        $('#ttt-modal-label').html('Error');
+        $('#ttt-modal-body').html(xhr.responseJSON.detail);
+        console.log(xhr)
+        /*alert(xhr.status);
+        alert(thrownError);*/
       }
     })
   })
