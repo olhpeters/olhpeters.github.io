@@ -4,6 +4,8 @@ $(document).ready(function () {
 
   var session
 
+  var host = "https://talk-to-table-api-ea5dafcdae70.herokuapp.com"
+
   function buildTable(tabledata) {
     table = new Tabulator("#example-table", {
       data: tabledata, //assign data to table
@@ -34,7 +36,7 @@ $(document).ready(function () {
     var fileInput = $('#file')[0].files[0];
     formData.append('file', fileInput);
     $.ajax({
-      url: "http://127.0.0.1:8000/upload",
+      url: host + "/upload",
       type: 'POST',
       data: formData,
       cache: false,
@@ -82,7 +84,7 @@ $(document).ready(function () {
     var talkInput=$("#talkInput").val()
     console.log(talkInput)
     $.ajax({
-      url: "http://127.0.0.1:8000/chat",
+      url: host + "/chat",
       type: 'POST',
       data: JSON.stringify({
         talk_input: talkInput,
