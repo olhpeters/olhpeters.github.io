@@ -1,5 +1,5 @@
 body {
-  padding-top: 5rem;
+  padding-top: 0rem;
 }
 
 .starter-template {
@@ -10,3 +10,16 @@ body {
 tabulator-print-footer {
   text-align: center;
 }
+
+.tabulator
+.tabulator-footer {
+  background-color: #212529
+}
+
+.tabulator
+.tabulator-header {
+  background-color: #212529
+}
+
+
+  

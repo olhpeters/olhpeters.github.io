@@ -28,7 +28,14 @@ $(document).ready(function () {
     { id: 5, name: "Margret Marmajuke", age: "16", col: "yellow", dob: "31/01/1999" },
   ]
 
-  buildTable(tabledata)
+  //buildTable(tabledata)
+
+  table = new Tabulator("#example-table", {
+    placeholder: "Please upload a csv file in the field above.<br/>You can find some sample csvs on <a href='https://www.kaggle.com' target='_blank'>Kaggle</a>.", //assign data to table
+    layout: "fitColumns",
+    height: 300,
+    autoColumns: true,
+  });
 
   $('#fileUploadForm').submit(function (e) {
     e.preventDefault();
